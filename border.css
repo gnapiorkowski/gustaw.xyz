@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+p {
+  font-size: large;
+  padding: 2vh;
+  padding-left: 5vh;
+  letter-spacing: 0.5vw;
+}
+
+body {
+  font-family: "Roboto";
+  background-color: #102030;
+  color: #CCAA10;
+}
+
+.title {
+  /* font-family: "Montserrat"; */
+  color: #FFF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 10vh;
+  width: 90vh;
+}
+
+.inset {
+  padding: 2vh;
+}
+.floor {
+  /* background-image: url("floor.jpeg"); */
+  background-color: #16161A;
+  background-size: cover;
+  margin: 0px;
+  padding:0px;
+}
+
+.images-table {
+  /* height: 20vh; */
+  width: 100%;
+}
+.image {
+  width: 90%;
+  padding: 2vh;
+}
+
+h1 {
+  font-size: 7vh;
+  line-height: 1;
+  margin: 1vh 1vw;
+}
+
+h2 {
+  font-size: 50px;
+  line-height: .75;
+  margin: 1vh 1vw;
+}
+.unusesd-h1 {
+  background-image: url(https://media.giphy.com/media/26BROrSHlmyzzHf3i/giphy.gif);
+  background-size: cover;
+  text-align: center;
+  color: transparent;
+  background-clip: text;
+  -moz-background-clip: text;
+  -webkit-background-clip: text;
+  text-transform: uppercase;
+  font-size: 7vh;
+  line-height: 1;
+  margin: 10px 0;
+}
+.unusesd-h2 {
+  /* background-image: url(https://media.giphy.com/media/26BROrSHlmyzzHf3i/giphy.gif); */
+  background-image: url("bg.png");
+  background-size: contain;
+  color: transparent;
+  background-clip: text;
+  -moz-background-clip: text;
+  -webkit-background-clip: text;
+  text-transform: uppercase;
+  font-size: 50px;
+  line-height: .75;
+  margin: 10px 0;
+}
+/* styling my button */
+

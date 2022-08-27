@@ -1,0 +1,64 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="main.css">
+  <!-- <meta property="og:image" content="bg.png" /> -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://gustaw.xyz/"/>
+  <meta property="og:title" content="gustaw.xyz" />
+  <meta property="og:description" content="This is my personal photography repository. All done by me."/>
+</head>
+<body>
+
+<div class="title">
+    <h1>GUSTAW.XYZ</h1>
+</div>
+
+<div class="floor">
+  <div class="inset">
+    <h2>PHOTOS</h2>
+    <div id="border">
+      <div id="images"></div>
+    </div>
+  </div>
+</div>
+</body>
+
+<script>
+  const images = document.getElementById("images");
+  const table = document.createElement('table');
+  table.setAttribute("class", "images-table");
+  table.border = '0';
+  const tableBody = document.createElement('tbody');
+  table.appendChild(tableBody);
+  var files = Array("DSC00093.jpg", "DSC00123.jpg", "DSC00188.jpg", "DSC00200.jpg", "DSC00210.jpg", "elektrykow1.jpg", "IMG00246.jpg", "IMG00254.jpg", "IMG00295.jpg", "IMG00310.jpg", "IMG00383.jpg", "DSC00099.jpg", "DSC00146.jpg", "DSC00191.jpg", "DSC00204.jpg", "DSC00233.jpg", "elektrykow2.jpg", "IMG00250.jpg", "IMG00291.jpg", "IMG00298.jpg", "IMG00372.jpg", "morze.jpg")
+  var rows = Math.floor(files.length/2) + files.length % 2;
+  var columns = 2;
+  console.log(rows);
+  for (let row = 0; row < rows; row++) {
+    const tr = document.createElement('tr');
+    tableBody.appendChild(tr);
+    for (let column = 0; column < columns; column++) {
+        const td = document.createElement('td');
+        var elem;
+        var ref;
+        var imageNo = row * 2 + column;
+        console.log(imageNo);
+        if(imageNo < files.length) {
+            elem = document.createElement("img");
+            elem.setAttribute("src", "images/" + files[imageNo]);
+            elem.setAttribute("class", "image");
+            elem.setAttribute("alt", "some-name");
+            ref = document.createElement("a");
+            ref.setAttribute("href", "images/" + files[imageNo]);
+          } else {
+            elem = document.createTextNode("");
+            }
+        ref.appendChild(elem);
+        td.appendChild(ref);
+        tr.appendChild(td);
+    }
+  }
+  images.appendChild(table);
+</script> 
+</html>
